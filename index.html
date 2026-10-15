@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hrutuja Ingole · Project Management & Product Development</title>
+<meta name="description" content="Portfolio of Hrutuja Ingole: CS student, project management enthusiast and product development intern on Sakshya112.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a1a;--card:#15132b;--line:#2a2750;--tx:#f4f2ff;--mu:#a9a6cf;--v:#8b6bff;--p:#ff5fa8;--c:#3de0ff;--y:#ffd166;--g:#4ade9b;
+--h:'Sora','Segoe UI',sans-serif;--b:'DM Sans','Segoe UI',sans-serif;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--tx);font:400 1.05rem/1.7 var(--b);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:2px solid var(--c);outline-offset:3px;border-radius:6px}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--h);letter-spacing:-.02em;line-height:1.1}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;margin-bottom:12px}
+.sub{color:var(--mu);max-width:56ch;margin-bottom:40px}
+.grad{background:linear-gradient(90deg,var(--v),var(--p),var(--y));-webkit-background-clip:text;background-clip:text;color:transparent}
+section{padding:96px 0}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--v),var(--p),var(--c));z-index:50}
+
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:4px;padding:6px;border-radius:99px;background:rgba(21,19,43,.75);backdrop-filter:blur(14px);border:1px solid var(--line);max-width:calc(100% - 24px);overflow-x:auto}
+nav a{padding:8px 16px;border-radius:99px;text-decoration:none;color:var(--mu);font-size:.92rem;white-space:nowrap;transition:.2s}
+nav a:hover{color:var(--tx);background:var(--line)}
+nav a.on{background:linear-gradient(90deg,var(--v),var(--p));color:#fff}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 0 80px;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 14s ease-in-out infinite alternate}
+.o1{width:420px;height:420px;background:var(--v);top:-80px;left:-100px}
+.o2{width:380px;height:380px;background:var(--p);bottom:-60px;right:-80px;animation-delay:-5s}
+.o3{width:260px;height:260px;background:var(--c);top:40%;left:55%;opacity:.28;animation-delay:-9s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.15)}}
+.hero .w{position:relative}
+.avatar{width:112px;height:112px;margin:0 auto 26px;border-radius:50%;padding:4px;background:conic-gradient(var(--v),var(--p),var(--y),var(--c),var(--v));animation:rot 8s linear infinite}
+.avatar i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--bg);font:800 2.2rem var(--h);font-style:normal;animation:rot 8s linear infinite reverse}
+@keyframes rot{to{transform:rotate(360deg)}}
+.hi{display:inline-block;padding:6px 16px;border:1px solid var(--line);border-radius:99px;background:rgba(21,19,43,.6);color:var(--mu);font-size:.95rem;margin-bottom:20px}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800}
+.hero p.l{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--mu);max-width:44ch;margin:22px auto 32px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid var(--line);transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.m{background:linear-gradient(90deg,var(--v),var(--p));border:0;color:#fff;box-shadow:0 10px 30px -8px var(--v)}
+.btn.a:hover{background:var(--card);border-color:var(--v)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:64px}
+.stats div{background:rgba(21,19,43,.7);border:1px solid var(--line);border-radius:18px;padding:18px 10px}
+.stats b{display:block;font:800 1.9rem var(--h)}
+.stats span{color:var(--mu);font-size:.88rem}
+
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--card)}
+.mq div{display:flex;gap:48px;width:max-content;animation:mq 30s linear infinite;font:700 1.15rem var(--h);color:var(--mu)}
+.mq span::after{content:"✦";margin-left:48px;color:var(--p)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* about */
+.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px}
+.box p{color:var(--mu);margin-top:14px}
+.edu h3{font-size:1.15rem}.edu small{color:var(--mu);display:block}
+.edu>div+div{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+
+/* sakshya */
+.sk{position:relative;border-radius:32px;border:1px solid var(--line);background:linear-gradient(160deg,#17143a,#0e0c24);padding:clamp(24px,4vw,52px);overflow:hidden}
+.sk::before{content:"";position:absolute;inset:-40% -20% auto auto;width:520px;height:520px;background:radial-gradient(var(--v),transparent 65%);opacity:.35}
+.sk .g{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.live{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border-radius:99px;background:rgba(74,222,155,.12);color:var(--g);font-weight:700;font-size:.9rem;margin-bottom:16px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--g);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(74,222,155,0)}0%{box-shadow:0 0 0 0 rgba(74,222,155,.7)}}
+.sk p{color:var(--mu)}
+.flow{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.flow span{padding:8px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-weight:600;font-size:.93rem}
+.flow em{color:var(--p);font-style:normal;align-self:center}
+.st{display:grid;gap:10px;margin-top:18px}
+.st div{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--mu)}
+.st b{flex:0 0 auto;padding:2px 12px;border-radius:99px;font-size:.8rem;color:#0b0a1a;margin-top:3px}
+.b1{background:var(--g)}.b2{background:var(--c)}.b3{background:var(--y)}.b4{background:#c9c5ee}
+.scene{position:relative;height:400px;border-radius:24px;background:linear-gradient(180deg,#1b1750 0%,#2b1a5e 55%,#4a2270 100%);border:1px solid var(--line);overflow:hidden}
+.scene svg.city{position:absolute;bottom:0;left:0;width:100%}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.6;animation:tw 3s infinite;transition:opacity .8s}
+.day{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;background:linear-gradient(180deg,#3fa9ff 0%,#9edcff 62%,#ffe7b0 100%)}
+.day::before{content:"";position:absolute;top:28px;right:34px;width:58px;height:58px;border-radius:50%;background:#ffd84a;box-shadow:0 0 0 14px rgba(255,216,74,.25),0 0 60px 20px rgba(255,216,74,.55)}
+.cloud{position:absolute;height:18px;border-radius:99px;background:#fff;opacity:.9;animation:cl 18s linear infinite alternate}
+.cloud::after{content:"";position:absolute;left:18%;top:-10px;width:45%;height:20px;border-radius:99px;background:#fff}
+@keyframes cl{to{transform:translateX(46px)}}
+.cp{fill:#0d0b24;transition:fill .9s}
+.scene:hover .day{opacity:1}
+.scene:hover .star{animation:none;opacity:0}
+.scene:hover .cp{fill:#5a4aa6}
+.scene:hover .beam{opacity:.12}
+.scene:hover .tag{color:#0b5d80;background:rgba(255,255,255,.75)}
+@keyframes tw{50%{opacity:.1}}
+.fly{position:absolute;left:50%;top:40px;width:210px;margin-left:-105px;animation:fl 6s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translate(-40px,0) rotate(-3deg)}50%{transform:translate(40px,-22px) rotate(3deg)}}
+.blade{transform-box:fill-box;transform-origin:center;animation:sp .1s linear infinite alternate}
+@keyframes sp{from{transform:scaleX(1)}to{transform:scaleX(.3)}}
+.beam{animation:bm 3s ease-in-out infinite}@keyframes bm{50%{opacity:.5}}
+.pin{position:absolute;bottom:62px;left:50%;margin-left:-8px;width:16px;height:16px;border-radius:50%;background:var(--p);animation:pp 1.6s infinite}
+@keyframes pp{0%{box-shadow:0 0 0 0 rgba(255,95,168,.8)}100%{box-shadow:0 0 0 26px rgba(255,95,168,0)}}
+.tag{position:absolute;left:14px;top:14px;padding:6px 12px;border-radius:10px;background:rgba(11,10,26,.7);font-size:.82rem;font-weight:700;color:var(--c)}
+.fine{position:relative;margin-top:26px;font-size:.88rem;color:var(--mu)}
+
+
+/* takeoff button */
+.take{position:relative;display:inline-flex;align-items:center;gap:16px;margin-top:26px;padding:12px 26px 12px 14px;border-radius:99px;text-decoration:none;color:#fff;background:linear-gradient(#17143a,#17143a) padding-box,linear-gradient(90deg,var(--v),var(--p),var(--c)) border-box;border:2px solid transparent;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.take::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--v),var(--p));opacity:0;transition:opacity .3s}
+.take:hover{box-shadow:0 14px 40px -10px var(--p);transform:translateY(-3px)}
+.take:hover::before{opacity:1}
+.take>*{position:relative}
+.pad{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;position:relative}
+.pad::after{content:"";position:absolute;bottom:7px;width:26px;height:5px;border-radius:50%;background:rgba(0,0,0,.45);filter:blur(2px);transition:.4s}
+.mini{width:44px;transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.mini .blade{animation-duration:.25s}
+.take:hover .mini{transform:translateY(-7px) rotate(-6deg)}
+.take:hover .mini .blade{animation-duration:.08s}
+.take:hover .pad::after{transform:scale(.6);opacity:.4}
+.take .tx{display:grid;text-align:left;line-height:1.25}
+.take .tx small{font-size:.78rem;opacity:.75;letter-spacing:.04em}
+.take .tx b{font-family:var(--h);font-size:1.05rem}
+.take .ar{font-size:1.3rem;transition:transform .3s}
+.take:hover .ar{transform:translateX(6px)}
+.take.go .mini{animation:off .9s ease-in forwards}
+@keyframes off{to{transform:translate(160px,-120px) rotate(25deg) scale(.4);opacity:0}}
+.take.go .ar{opacity:0}
+
+/* timeline */
+.tl{position:relative;padding-left:30px;border-left:2px solid var(--line);display:grid;gap:22px}
+.tl article{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.tl article::before{content:"";position:absolute;left:-39px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--p);border:3px solid var(--bg)}
+.tl time{color:var(--c);font-weight:700;font-size:.9rem}
+.tl h3{font-size:1.25rem;margin:4px 0}
+.tl li,.tl p{color:var(--mu);font-size:.97rem}.tl ul{padding-left:18px;margin-top:8px;display:grid;gap:4px}
+
+/* projects */
+.pg{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.pc{position:relative;grid-column:span 3;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:12px;overflow:hidden;transition:.3s}
+.pc:nth-child(1),.pc:nth-child(4){grid-column:span 4}.pc:nth-child(2),.pc:nth-child(3){grid-column:span 2}
+.pc::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),rgba(139,107,255,.22),transparent 60%);opacity:0;transition:.3s}
+.pc:hover{border-color:var(--v);transform:translateY(-4px)}.pc:hover::before{opacity:1}
+.pc>*{position:relative}
+.ic{font-size:1.8rem}
+.pc h3{font-size:1.3rem}.pc .m{color:var(--c);font-size:.88rem;font-weight:700}
+.pc li,.pc p{color:var(--mu);font-size:.95rem}.pc ul{padding-left:18px;display:grid;gap:6px}
+.res{margin-top:auto;padding:12px 14px;border-radius:14px;background:rgba(74,222,155,.1);color:var(--g)!important;font-weight:700}
+
+/* skills */
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sg h3{font-size:1.05rem;margin-bottom:14px}
+.ch{display:flex;flex-wrap:wrap;gap:8px}
+.ch span{padding:6px 14px;border-radius:99px;background:rgba(139,107,255,.14);border:1px solid rgba(139,107,255,.35);font-size:.92rem;transition:.2s}
+.ch span:hover{background:var(--v);transform:translateY(-2px)}
+.cert{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.cert div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.cert b{display:block;margin-bottom:4px}.cert span{color:var(--mu);font-size:.92rem}
+
+/* contact */
+.ct{text-align:center;background:linear-gradient(135deg,var(--v),var(--p));border-radius:36px;padding:clamp(40px,7vw,80px) 24px;position:relative;overflow:hidden}
+.ct h2{color:#fff;font-size:clamp(2rem,6vw,4rem)}.ct p{color:#fff;opacity:.9;max-width:44ch;margin:0 auto 28px}
+.ct .btn.m{background:#fff;color:#2a1a66;box-shadow:none}.ct .btn.a{border-color:rgba(255,255,255,.6);color:#fff}.ct .btn.a:hover{background:rgba(255,255,255,.15)}
+footer{text-align:center;color:var(--mu);font-size:.9rem;padding:36px 0}
+
+@media(max-width:860px){.ab,.sk .g,.sg,.cert{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}
+.pg{grid-template-columns:1fr}.pc,.pc:nth-child(n){grid-column:span 1}section{padding:70px 0}.scene{height:330px}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+@media (hover:hover) and (pointer:fine){html,body,a,button{cursor:none}
+.cd,.cr{position:fixed;top:0;left:0;z-index:100;pointer-events:none;opacity:0;transition:opacity .3s}
+.on-page .cd,.on-page .cr{opacity:1}
+.cd{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.cr{width:36px;height:36px;margin:-18px 0 0 -18px;border:2px solid var(--p);border-radius:50%;transition:width .25s,height .25s,margin .25s,border-radius .25s,background .25s,border-color .25s,opacity .3s}
+.cr.link{width:60px;height:60px;margin:-30px 0 0 -30px;background:rgba(255,95,168,.15);border-color:var(--v)}
+.cr.cam{width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:10px;border:2px dashed #fff;background:rgba(255,255,255,.06);mix-blend-mode:difference}
+.cr.cam::before,.cr.cam::after{content:"";position:absolute;background:#fff}
+.cr.cam::before{left:50%;top:-9px;bottom:-9px;width:1px}.cr.cam::after{top:50%;left:-9px;right:-9px;height:1px}
+.cr.cam~.cd{opacity:0}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="cr" id="cr"></div><div class="cd" id="cd"></div>
+<nav id="nav">
+  <a href="#home" class="on">Home</a><a href="#about">About</a><a href="#sakshya112">Sakshya112</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="w">
+    <div class="avatar"><i>HI</i></div>
+    <span class="hi">👋 Hi, I'm</span>
+    <h1>Hrutuja <span class="grad">Ingole</span></h1>
+    <p class="l">CS student, project management enthusiast and product development intern, turning ideas into plans that ship.</p>
+    <div class="btns"><a class="btn m" href="#projects">View my work</a><a class="btn a" href="#contact">Contact me</a></div>
+    <div class="stats">
+      <div><b>15</b><span>person team led</span></div>
+      <div><b>30+</b><span>startups onboarded</span></div>
+      <div><b>4</b><span>projects delivered</span></div>
+      <div><b>99.8%</b><span>migration uptime</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="mq"><div>
+  <span>Agile</span><span>Scrum</span><span>Kanban</span><span>Jira</span><span>Trello</span><span>Notion</span><span>RICE</span><span>MoSCoW</span><span>Risk management</span><span>Stakeholder management</span>
+  <span>Agile</span><span>Scrum</span><span>Kanban</span><span>Jira</span><span>Trello</span><span>Notion</span><span>RICE</span><span>MoSCoW</span><span>Risk management</span><span>Stakeholder management</span>
+</div></div>
+
+<section id="about"><div class="w rv">
+  <h2>About <span class="grad">me</span></h2>
+  <p class="sub">The person behind the plans.</p>
+  <div class="ab">
+    <div class="box"><h3>Planner, coordinator, builder</h3>
+      <p>I'm a Computer Science &amp; Engineering student from Pune who likes turning messy ideas into clear plans. I work with Agile, Scrum and Kanban, and I care about the parts that make projects land: scope, schedules, risks and honest communication with stakeholders.</p>
+      <p>I'm looking for a Project Management internship in a fast-paced tech team.</p></div>
+    <div class="box edu"><div><h3>B.E. Computer Science &amp; Engineering</h3><small>College of Engineering and Technology, Akola</small><small>2021 to present</small></div>
+      <div><h3>📍 Pune, Maharashtra</h3><small>Open to internships and remote work</small></div></div>
+  </div>
+</div></section>
+
+<section id="sakshya112"><div class="w rv">
+  <div class="sk">
+    <div class="g">
+      <div>
+        <span class="live"><i></i>Currently working on this</span>
+        <h2>Sakshya<span class="grad">112</span></h2>
+        <p>I'm a Product Development Intern on Sakshya112, a PopPop Labs venture building a drone-as-first-responder system for India. Police can take 10 to 20 minutes to reach a scene. The goal is live video and a voice link there in about two minutes.</p>
+        <div class="flow"><span>📱 Citizen's phone</span><em>→</em><span>🏢 Police control room</span><em>→</em><span>🚁 Drone on scene</span></div>
+        <div class="st">
+          <div><b class="b1">Working</b>One-tap capture, sealed video, offline upload queue, operator console</div>
+          <div><b class="b2">Testing</b>Shake to start, check-ins, family circles, live location, Hindi and Marathi</div>
+          <div><b class="b3">Building</b>Voice start in Indian languages, link to the police control room</div>
+          <div><b class="b4">Design</b>Veer outdoor drone, Nayak indoor drone, Rakshak launch station</div>
+        </div>
+        <a class="take" id="take" href="https://www.poppopofficial.com/sakshya112/#top" target="_blank" rel="noopener" aria-label="Visit the Sakshya112 website (opens in a new tab)">
+          <span class="pad"><svg class="mini" viewBox="0 0 120 70" aria-hidden="true">
+            <g stroke="#fff" stroke-width="5" stroke-linecap="round"><line x1="48" y1="30" x2="18" y2="16"/><line x1="72" y1="30" x2="102" y2="16"/><line x1="50" y1="40" x2="22" y2="54"/><line x1="70" y1="40" x2="98" y2="54"/></g>
+            <g fill="#3de0ff"><ellipse class="blade" cx="18" cy="11" rx="14" ry="2.5"/><ellipse class="blade" cx="102" cy="11" rx="14" ry="2.5"/><ellipse class="blade" cx="22" cy="49" rx="14" ry="2.5"/><ellipse class="blade" cx="98" cy="49" rx="14" ry="2.5"/></g>
+            <rect x="42" y="26" width="36" height="18" rx="8" fill="#fff"/><circle cx="60" cy="48" r="5" fill="#ff5fa8"/>
+          </svg></span>
+          <span class="tx"><small>SAKSHYA112 WEBSITE</small><b>Take off to the site</b></span>
+          <span class="ar">→</span>
+        </a>
+      </div>
+      <div class="scene" aria-hidden="true">
+        <div class="day"><span class="cloud" style="width:90px;top:70px;left:12%"></span><span class="cloud" style="width:70px;top:120px;left:58%;animation-delay:-6s"></span></div>
+        <span class="tag">● LIVE VIEW · target 2 min</span>
+        <span class="star" style="left:10%;top:22%"></span><span class="star" style="left:30%;top:12%;animation-delay:-1s"></span><span class="star" style="left:72%;top:18%;animation-delay:-2s"></span><span class="star" style="left:88%;top:34%"></span><span class="star" style="left:50%;top:8%;animation-delay:-.5s"></span>
+        <div class="fly">
+          <svg viewBox="0 0 300 220">
+            <defs><linearGradient id="bd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c3bdf0"/></linearGradient>
+            <radialGradient id="ln" cx=".4" cy=".35"><stop offset="0" stop-color="#c9f6ff"/><stop offset="1" stop-color="#1f8fc4"/></radialGradient></defs>
+            <path class="beam" d="M150 130 L85 220 L215 220 Z" fill="#3de0ff" opacity=".25"/>
+            <g stroke="#3a3470" stroke-width="7" stroke-linecap="round"><line x1="128" y1="92" x2="52" y2="58"/><line x1="172" y1="92" x2="248" y2="58"/><line x1="130" y1="108" x2="62" y2="142"/><line x1="170" y1="108" x2="238" y2="142"/></g>
+            <g fill="#241f52"><circle cx="52" cy="58" r="8"/><circle cx="248" cy="58" r="8"/><circle cx="62" cy="142" r="8"/><circle cx="238" cy="142" r="8"/></g>
+            <g fill="#ff5fa8" fill-opacity=".8"><ellipse class="blade" cx="52" cy="50" rx="34" ry="3.5"/><ellipse class="blade" cx="248" cy="50" rx="34" ry="3.5"/><ellipse class="blade" cx="62" cy="134" rx="34" ry="3.5"/><ellipse class="blade" cx="238" cy="134" rx="34" ry="3.5"/></g>
+            <rect x="116" y="82" width="68" height="36" rx="16" fill="url(#bd)"/><rect x="128" y="88" width="44" height="6" rx="3" fill="#8b6bff"/>
+            <circle cx="150" cy="124" r="11" fill="#241f52"/><circle cx="150" cy="124" r="6.5" fill="url(#ln)"/>
+          </svg>
+        </div>
+        <div class="pin"></div>
+        <svg class="city" viewBox="0 0 400 90" preserveAspectRatio="none"><path class="cp" d="M0 90V50h30V30h26v24h22V38h30V60h24V20h30v36h26V44h28V66h30V34h24v30h30V48h30v42z"/></svg>
+      </div>
+    </div>
+    <p class="fine">Status as of October 2026. A person decides at every step: police dispatch and licensed pilots fly. Drone flights need DGCA authorisation.</p>
+  </div>
+</div></section>
+
+<section id="experience"><div class="w rv">
+  <h2>Experience</h2><p class="sub">Where I've led and contributed.</p>
+  <div class="tl">
+    <article><time>Present</time><h3>Product Development Intern · Sakshya112</h3><p>PopPop Labs</p>
+      <ul><li>Contributing to a public-safety product spanning a mobile app, a police control room and drone infrastructure.</li></ul></article>
+    <article><time>2025</time><h3>Lead E-Cell Coordinator</h3><p>College of Engineering and Technology, Akola</p>
+      <ul><li>Planned and ran the Pitch Perfect startup showcase end to end in one week, leading a 15-member cross-functional team.</li><li>Invited and onboarded 30+ startup teams using scope definition, scheduling, risk mitigation and stakeholder communication.</li></ul></article>
+  </div>
+</div></section>
+
+<section id="projects"><div class="w rv">
+  <h2>Selected <span class="grad">projects</span></h2><p class="sub">Case studies and builds, with the numbers.</p>
+  <div class="pg">
+    <article class="pc"><div class="ic">📱</div><h3>TaskMate</h3><div class="m">Mobile app launch plan · Agile Scrum · 2026</div>
+      <ul><li>Full launch plan: charter, 2 personas, 10 user stories, 3-month MoSCoW roadmap of 20 features, 10-item risk register, 8-person stakeholder map.</li><li>Ran a Trello sprint with grooming, story points, standups and a retrospective.</li></ul>
+      <p class="res">All 6 KPI targets met by Month 1</p></article>
+    <article class="pc"><div class="ic">☁️</div><h3>AIT CampusCloud</h3><div class="m">IT migration · Agile Kanban · 2026</div>
+      <ul><li>Migrated a 4,200+ student portal: RAID log, Jira board (5 epics, 20 issues), 6-phase plan with rollback.</li></ul>
+      <p class="res">15 days early, ₹35,000 under budget</p></article>
+    <article class="pc"><div class="ic">🍔</div><h3>Swiggy teardown</h3><div class="m">RICE · North Star · 2026</div>
+      <ul><li>3 personas, 5 pain points found through reviews, benchmarking and root cause analysis.</li></ul>
+      <p class="res">Projected +14% Day-30 retention</p></article>
+    <article class="pc"><div class="ic">🚗</div><h3>Smart Vehicle Accident Detection</h3><div class="m">IoT · Arduino, Python, GPS, GSM · 5 months</div>
+      <ul><li>Led a 3-member team building an IoT vehicle monitoring system.</li><li>Handled sprint planning, task allocation and milestone tracking.</li></ul></article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="w rv">
+  <h2>Skills &amp; <span class="grad">learning</span></h2><p class="sub">Tools I use and what I'm studying.</p>
+  <div class="sg">
+    <div class="box"><h3>🛠 PM tools</h3><div class="ch"><span>Jira</span><span>Trello</span><span>Notion</span><span>MS Excel</span><span>Google Sheets</span></div></div>
+    <div class="box"><h3>🧭 Methods</h3><div class="ch"><span>Agile</span><span>Scrum</span><span>Kanban</span><span>Waterfall</span><span>MoSCoW</span><span>RICE</span><span>RAID log</span><span>Root cause analysis</span></div></div>
+    <div class="box"><h3>💻 Technical</h3><div class="ch"><span>Python</span><span>SQL</span><span>Advanced Excel</span><span>IoT basics</span></div></div>
+    <div class="box"><h3>🤝 Strengths</h3><div class="ch"><span>Coordination</span><span>Risk management</span><span>Stakeholders</span><span>KPI tracking</span><span>Change management</span><span>Problem solving</span></div></div>
+  </div>
+  <div class="cert">
+    <div><b>Google Project Management</b><span>Coursera · in progress</span></div>
+    <div><b>PMI Kickoff: Predictive PM</b><span>Project Management Institute · done</span></div>
+    <div><b>Python for Beginners</b><span>Udemy · done</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="w rv"><div class="ct">
+  <h2>Let's work together</h2><p>I'm open to project management internships. Send me a note and I'll reply soon.</p>
+  <div class="btns"><a class="btn m" href="mailto:hrutujasingole@gmail.com">Email me</a><a class="btn a" href="https://linkedin.com/in/hrutuja-ingole-pm" target="_blank" rel="noopener">LinkedIn</a><a class="btn a" href="https://github.com/hrutujasingole" target="_blank" rel="noopener">GitHub</a></div>
+</div></div></section>
+<footer>© <span id="yr">2026</span> Hrutuja Ingole · Pune, Maharashtra</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var bar=document.getElementById('bar');
+addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var links=[].slice.call(document.querySelectorAll('nav a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var so=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+x.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(function(s){so.observe(s)});
+document.querySelectorAll('.pc').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+(function(){
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  var cd=document.getElementById('cd'),cr=document.getElementById('cr'),x=0,y=0,rx=0,ry=0,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  addEventListener('pointermove',function(e){x=e.clientX;y=e.clientY;document.body.classList.add('on-page');
+    cd.style.transform='translate('+x+'px,'+y+'px)';
+    var t=e.target;cr.classList.toggle('cam',!!t.closest('.scene'));
+    cr.classList.toggle('link',!t.closest('.scene')&&!!t.closest('a,button,.pc,.ch span'));});
+  document.addEventListener('mouseleave',function(){document.body.classList.remove('on-page')});
+  (function loop(){rx+=(x-rx)*(reduce?1:.18);ry+=(y-ry)*(reduce?1:.18);cr.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(loop)})();
+})();
+document.getElementById('take').addEventListener('click',function(){var t=this;t.classList.add('go');setTimeout(function(){t.classList.remove('go')},1600)});
+</script>
+</body>
+</html>
